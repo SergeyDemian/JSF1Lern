@@ -11,7 +11,7 @@ public class HelloWorld implements Serializable {
 	public String str = "Hello yyyyyyyyyaaaaaahhhhhhhhhhhuuuuuuuuuuu!!!!";
 
 	public HelloWorld() {
-		System.out.println("Привет");
+		System.out.println("HelloWorld - started!");
 	}
 
 	public String getStr() {
