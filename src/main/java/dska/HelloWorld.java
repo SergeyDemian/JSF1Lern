@@ -1,25 +1,35 @@
 package main.java.dska;
 
-import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 
 @ManagedBean(name="helloWorld", eager = true)
-public class HelloWorld implements Serializable {
+@RequestScoped
 
-	private static final long serialVersionUID = 1L;
+public class HelloWorld {
+
+	@ManagedProperty(value = "#{message}")
+	private Message messageBean;
+	private String message;
 	
-	public String str = "Hello yyyyyyyyyaaaaaahhhhhhhhhhhuuuuuuuuuuu!!!!";
-
 	public HelloWorld() {
 		System.out.println("HelloWorld - started!");
 	}
-
-	public String getStr() {
-		return str;
-	}
-
-	public void setStr(String str) {
-		this.str = str;
-	}
 	
+	
+	public String getMessage() {
+		
+		if (messageBean != null){
+			message = messageBean.getMessage();
+		}
+		return message;
+		
+	}
+
+	public void setMessageBean(Message message) {
+		this.messageBean = message;
+	}
+
+
 }
