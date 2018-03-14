@@ -8,7 +8,7 @@ import javax.faces.bean.RequestScoped;
 
 public class Message {
 	
-	private String message = "Hello World uuHH!!!";
+	private String message = "Hello World!!!";
 
 	public String getMessage() {
 		return message;
